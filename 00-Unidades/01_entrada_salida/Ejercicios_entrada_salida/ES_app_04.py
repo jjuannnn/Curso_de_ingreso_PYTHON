@@ -33,8 +33,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-        
+        r_prompt= prompt("Ingreso", "Ingresa tu nombre")
+        #alert("Alerta", r_prompt)
+        self.txt_nombre.insert(0, r_prompt)
     
 if __name__ == "__main__":
     app = App()
