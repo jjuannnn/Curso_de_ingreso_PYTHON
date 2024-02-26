@@ -29,7 +29,16 @@ class App(customtkinter.CTk):
         
     
     def btn_mostrar_iteracion_on_click(self):
-        pass
+        acu= 0
+        cont= 0
+
+        while cont < 11:
+            if cont % 2 == 0:
+                acu= acu + cont
+            cont +=1
+
+        alert("Par", f"Los números pares entre 1 y 10 son: {acu}")
+
     
     
 if __name__ == "__main__":

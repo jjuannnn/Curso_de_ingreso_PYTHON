@@ -26,7 +26,15 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        for i in range(10):
+            num = prompt("", f"Ingrese el número {i+1}: ")
+            num = int(num)
+            
+            if num == 9:
+                break
+            
+            print(num)
+
         
     
 if __name__ == "__main__":

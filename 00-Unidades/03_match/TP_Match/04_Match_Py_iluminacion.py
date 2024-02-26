@@ -171,11 +171,6 @@ class App(customtkinter.CTk):
 
         alert("Lamparas", f"El valor, con el descuento aplicado, es de: {precio_final}")
 '''
-
-
-
-
-
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

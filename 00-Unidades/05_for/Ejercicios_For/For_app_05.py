@@ -27,7 +27,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        num= prompt("", "Ingrese un numero")
+        num= int(num)
+
+        for i in range(1, num+1):
+            if i % 2 == 0:
+                alert("", f"El numero {i} es par")
+
             
         
     

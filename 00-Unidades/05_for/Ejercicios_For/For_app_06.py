@@ -27,7 +27,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero= prompt("Numero", "Ingrese un numero: ")
+        numero= int(numero)
+        cont=0
+
+        for i in range(1, numero+1):
+            if numero % i == 0:
+                cont += 1
+                alert("Mensaje", f"El numero {numero} es divisible por {i}")
+            
+        
+        alert("Mensaje", f"el numero {numero} puede ser dividido {cont} veces.")
         
     
 if __name__ == "__main__":

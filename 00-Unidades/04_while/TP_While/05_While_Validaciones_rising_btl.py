@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Juan Cruz
+apellido: Leiva
 ---
 TP: While_validaciones_rising_btl
 ---
@@ -41,8 +41,7 @@ class App(customtkinter.CTk):
 
         self.label2 = customtkinter.CTkLabel(master=self, text="Estado")
         self.label2.grid(row=2, column=0, padx=20, pady=10)
-        self.combobox_tipo = customtkinter.CTkComboBox(
-            master=self, values=["Soltero/a", "Casado/a", "Divorciado/a", "Viudo/a"])
+        self.combobox_tipo = customtkinter.CTkComboBox(master=self, values=["Soltero/a", "Casado/a", "Divorciado/a", "Viudo/a"])
         self.combobox_tipo.grid(row=2, column=1, padx=20, pady=10)
 
         self.label3 = customtkinter.CTkLabel(master=self, text="Legajo")
@@ -55,7 +54,41 @@ class App(customtkinter.CTk):
         self.btn_validar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
 
     def btn_validar_on_click(self):
-        pass
+        cont=0
+
+        while cont < 1:
+            edad= prompt("Edad", "Ingrese su edad: ")
+            edad= int(edad)
+
+
+            if 18 <= edad <= 90:
+
+                apellido= prompt("Nombre", "Ingrese su apellido: ")
+                legajo= prompt("Legajo", "Ingrese su numero de legajo: ")
+                legajo= int(legajo)
+
+                estado= prompt("Estado", "Ingrese su estado civil: ")
+                while estado != "Soltero" and estado != "Casado" and estado != "Divorciado" and estado != "Viudo":
+                    estado= prompt("Error", "No escribio una opción valida, recuerde que son: Soltero / Casado / Divorciado / Viudo")
+
+                cont+=1
+
+            else:
+                break
+            
+
+
+        self.txt_apellido.delete(0,100)
+        self.txt_apellido.insert(0, apellido)
+        self.txt_edad.delete(0,100)
+        self.txt_edad.insert(0,edad)
+        self.combobox_tipo.set(estado)
+        self.txt_legajo.delete(0,100)
+        self.txt_legajo.insert(0,legajo)
+
+
+
+
 
 
 if __name__ == "__main__":
