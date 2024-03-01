@@ -29,13 +29,14 @@ class App(customtkinter.CTk):
         
     
     def btn_mostrar_iteracion_on_click(self):
-        cont = 0
+        
+        while True:
+            nom= prompt("Nombre", "Ingrese su nombre: ")
+            edad= prompt("Edad", "Ingrese su edad: ")
+            edad= int(edad)
 
-        while cont < 10:
-
-            alert("While", f"{cont}")
-
-            cont = cont + 1
+            while edad<12:
+                edad= prompt("Error", "Edad invalida, tiene que ser mayor que 12")
 
             
 

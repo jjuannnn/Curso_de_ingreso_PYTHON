@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Juan Cruz
+apellido: Leiva
 ---
 Ejercicio: for_07
 ---
@@ -33,15 +33,12 @@ class App(customtkinter.CTk):
 
         for i in range(2, num):
             if num % i == 0:
-                primo = False 
-            
-            if primo == False:
-                break
+                primo = False
 
-        if primo == True:
-            print(f"El número {num} es primo")
+        if primo == False:
+            alert("Numero", f"El número {num} es primo")
         else:
-            print(f"El número {num} no es primo")
+            alert("Numero", f"El número {num} no es primo")
 
         
     
